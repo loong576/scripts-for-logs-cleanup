@@ -49,7 +49,7 @@ find $log_directory2 -type f -mtime +$Days2 -exec rm {} \;
 find $log_directory3 -type f -mtime +$Days2 -exec rm {} \;
 ```
 
-**清理脚本原理：**使用find查找指定目录($log_directory)下所有日志文件(-type f)，有时会去除不需要的目录"\\( -path \$log_directory2 -o -path \$log_directory3 \\)"，再按照文件生成日期和时间参数(-mtime \$Day)来清除(exec rm {} \\)     
+清理脚本原理：使用find查找指定目录($log_directory)下所有日志文件(-type f)，有时会去除不需要的目录"\\( -path \$log_directory2 -o -path \$log_directory3 \\)"，再按照文件生成日期和时间参数(-mtime \$Day)来清除(exec rm {} \\)     
 
 ![image-20200717175539948](https://i.loli.net/2020/07/17/gQdO67C2F8D5YkT.png)
 
